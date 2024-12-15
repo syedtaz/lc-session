@@ -1,4 +1,4 @@
 (executable
  (public_name lcsession)
  (name main)
- (libraries cmdliner))
+ (libraries cmdliner sqlite3 xdg))
