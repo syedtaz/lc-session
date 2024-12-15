@@ -1,0 +1,4 @@
+(executable
+ (public_name lcsession)
+ (name main)
+ (libraries cmdliner))
