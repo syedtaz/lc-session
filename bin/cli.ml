@@ -9,6 +9,12 @@ let create =
     Command.Param.(map (anon ("name" %: string)) ~f:(fun name () -> Sessions.create name))
 ;;
 
+let add =
+  Command.basic
+  ~summary:"Add a completed problem to a session."
+  ~readme:(fun () -> "Add a completed problem with [id] to a session with named [name].")
+  Command.Param.(map (anon))
+
 let list =
   Command.basic
     ~summary:"List all sessions"

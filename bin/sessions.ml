@@ -39,7 +39,8 @@ let reset () =
   let rc =
     Sqlite3.exec
       db
-      "DELETE FROM sessions_tbl; DELETE FROM SQLITE_SEQUENCE WHERE name='sessions_tbl';"
+      "DELETE FROM sessions_tbl; DELETE FROM SQLITE_SEQUENCE WHERE name='sessions_tbl'; \
+       DELETE FROM records_tbl; DELETE FROM SQLITE_SEQUENCE WHERE name='records_tbl'"
   in
   match Sqlite3.Rc.is_success rc with
   | true -> Format.printf "successfully reset\n"

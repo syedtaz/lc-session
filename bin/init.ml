@@ -21,7 +21,9 @@ let check_default_tables (db : Sqlite3.db) =
     Sqlite3.exec
       db
       "CREATE TABLE IF NOT EXISTS sessions_tbl (id INTEGER PRIMARY KEY AUTOINCREMENT, \
-       name TEXT NOT NULL UNIQUE)"
+       name TEXT NOT NULL UNIQUE); CREATE TABLE IF NOT EXISTS records_tbl (problem \
+       INTEGER NOT NULL, session INTEGER NOT NULL, PRIMARY KEY (problem, session) ON \
+       CONFLICT IGNORE)"
   in
   match Sqlite3.Rc.is_success rc with
   | true -> db
