@@ -1,9 +1,9 @@
 (lang dune 3.16)
 
-(name lcsession)
+(name lcs)
 
 (source
- (github username/reponame))
+ (sourcehut syedtaz/lc-session))
 
 (authors "Tazmilur Saad")
 
@@ -12,9 +12,9 @@
 (license MIT)
 
 (package
- (name lcsession)
+ (name lcs)
  (synopsis "CLI tool for managing leetcode sessions.")
  (description "CLI tool for managing leetcode sessions.")
  (depends ocaml dune)
  (tags
-  (topics "to describe" your project)))
+  ("to describe")))

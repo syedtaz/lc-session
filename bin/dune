@@ -1,4 +1,5 @@
 (executable
- (public_name lcsession)
+ (public_name lcs)
  (name main)
- (libraries cmdliner sqlite3 xdg))
+ (preprocess (pps ppx_jane))
+ (libraries core sqlite3 xdg core_unix.command_unix))

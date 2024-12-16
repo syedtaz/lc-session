@@ -1,3 +1,1 @@
-let () =
-  let xdg = Init.create_xdg () in
-  let _ = Init.initialize xdg in ()
+let () = Command_unix.run ~version:"0.1" ~build_info:"debug" Cli.root
